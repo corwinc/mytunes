@@ -10,13 +10,28 @@ var AppView = Backbone.View.extend({
     this.model.on('change:currentSong', function(model) {
       this.playerView.setSong(model.get('currentSong'));
     }, this);
+
+    this.listenTo(this.playerView, 'ended', function() {
+      console.log(' i heard ended');
+    });
+
+    
   },
+  // events: {
+  //   'ended' : 'getNextSong',
+  // },
 
   render: function() {
     return this.$el.html([
       this.playerView.$el,
       this.libraryView.$el
     ]);
-  }
+  },
+
+  getNextSong: function() {
+    // Triggering an event here will also trigger the event on the collection
+    console.log('triggered getNextSong');
+    //this.trigger('getNextSong', this);
+  },
 
 });

@@ -3,8 +3,14 @@ var LibraryView = Backbone.View.extend({
 
   tagName: 'table',
 
+
   initialize: function() {
     this.render();
+    var context = this;
+
+    this.collection.listenTo(this.collection, 'fetcher', function(){
+      context.render()
+    });
 
   },
 

@@ -5,8 +5,6 @@ var SongQueueEntryView = Backbone.View.extend({
 
 
   initialize: function() {
-   // this.on('change', this.render, this);
-   // We might need to wrap this like above ^;
    this.render();
    console.log(this);
 
