@@ -25,10 +25,6 @@ var Songs = Backbone.Collection.extend({
         console.error('chatterbox: Failed to send message', data);
       }
     });
-
-  
-  // this.fetch();
-  // console.log(this.fetch());
     
   },
 

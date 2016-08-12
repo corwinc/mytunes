@@ -38,11 +38,7 @@ var SongQueue = Backbone.Collection.extend({
     this.listenTo(this, 'enqueue', function(e) {
       console.log('lets start here');
     });
-
-    // this.on('click', )
-
-
-
+    
   },
 
   playFirst: function(e) {

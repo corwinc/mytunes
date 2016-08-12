@@ -8,8 +8,8 @@ var LibraryView = Backbone.View.extend({
     this.render();
     var context = this;
 
-    this.collection.listenTo(this.collection, 'fetcher', function(){
-      context.render()
+    this.collection.listenTo(this.collection, 'fetcher', function() {
+      context.render();
     });
 
   },
